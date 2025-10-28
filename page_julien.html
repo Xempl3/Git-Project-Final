@@ -10,23 +10,27 @@
 
   <!-- === HEADER === -->
   <header id="fondheaderjulien">
-  <video autoplay muted loop playsinline class="video-background">
-    <source src="videos/vidultra.mp4" type="video/mp4">
-  </video>
+    <div class="video-background">
+      <iframe
+        src="https://www.youtube.com/embed/n3ebWyJiGu0?autoplay=1&mute=1&loop=1&playlist=n3ebWyJiGu0&controls=0&showinfo=0&modestbranding=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+      ></iframe>
+    </div>
 
-  <div class="overlay-content">
-    <h1 class="titrejulien">Parlons de Moi</h1>
-    <nav>
-      <ul class="navigateur">
-        <li><a class="nav-btn" href="#">Accueil</a></li>
-        <li><a class="nav-btn" href="#">Mes passions</a></li>
-        <li><a class="nav-btn" href="#">Dons</a></li>
-        <li><a class="nav-btn" href="#">Contact</a></li>
-
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="overlay-content">
+      <h1 class="titrejulien">Parlons de Moi</h1>
+      <nav>
+        <ul class="navigateur">
+          <li><a class="nav-btn" href="#">Accueil</a></li>
+          <li><a class="nav-btn" href="#">Mes passions</a></li>
+          <li><a class="nav-btn" href="#">Dons</a></li>
+          <li><a class="nav-btn" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <!-- === PRÉSENTATION === -->
   <h2 id="presentation">Qui suis-je ?</h2>
@@ -129,5 +133,46 @@
   <p>Au dela de mes projets Professionel, j'ai aussi une grande envie d'explorer le monde, de découvrir de nouvelle culture, de voyage, comme j'en ai deja eu l'occasion.
     Voici quelque photo des voyage que j'ai pu faire dans ma vie :
   </p>
+
+    <div class="image-voyage">
+    <a href="#img1"><img src="images/imgjapan1.jpg" alt="Voyage Japon 1"></a>
+    <a href="#img2"><img src="images/imgjapan2.jpg" alt="Voyage Japon 2"></a>
+    <a href="#img3"><img src="images/imgjapan3.jpg" alt="Voyage Japon 3"></a>
+    </div>
+
+    <!-- Lightboxes -->
+    <div class="lightbox" id="img1">
+    <a href="#close" class="close"></a>
+    <img src="images/imgjapan1.jpg" alt="Voyage Japon 1">
+    </div>
+
+    <div class="lightbox" id="img2">
+    <a href="#close" class="close"></a>
+    <img src="images/imgjapan2.jpg" alt="Voyage Japon 2">
+    </div>
+
+    <div class="lightbox" id="img3">
+    <a href="#close" class="close"></a>
+    <img src="images/imgjapan3.jpg" alt="Voyage Japon 3">
+    </div>
+
+    <!-- Ancre vide qui empêche le saut -->
+    <div id="close"></div>
+    
+    <footer>
+  <p>Retrouve-moi sur les réseaux :</p>
+  <div class="reseaux">
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M22.46 6c-.77.35-1.6.59-2.46.69a4.24 4.24 0 0 0 1.85-2.34 8.38 8.38 0 0 1-2.68 1.03A4.19 4.19 0 0 0 16.11 4a4.2 4.2 0 0 0-4.19 4.19c0 .33.04.66.11.98A11.91 11.91 0 0 1 3.15 5.15a4.2 4.2 0 0 0 1.3 5.59 4.15 4.15 0 0 1-1.9-.52v.05c0 2.04 1.45 3.75 3.38 4.13-.35.1-.72.15-1.1.15-.27 0-.53-.03-.79-.08.53 1.67 2.08 2.89 3.91 2.92A8.43 8.43 0 0 1 2 19.54a11.86 11.86 0 0 0 6.44 1.89c7.72 0 11.94-6.4 11.94-11.94l-.01-.54A8.3 8.3 0 0 0 22.46 6z"/></svg>
+    </a>
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .2 2.5.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.5.3 1.3.4 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 2-.4 2.5-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.5.2-1.3.3-2.5.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.2-2.5-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.5-.3-1.3-.4-2.5-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-2 .4-2.5.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.5-.2 1.3-.3 2.5-.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 0 5.7.1 4.7.3 3.9.6 3 .9 2.3 1.3 1.6 2 .9 2.7.5 3.4.2 4.3c-.3.8-.5 1.8-.6 3.1C-.1 8.7 0 9.1 0 12s0 3.3.1 4.6c.1 1.3.3 2.3.6 3.1.3.9.7 1.6 1.4 2.3.7.7 1.4 1.1 2.3 1.4.8.3 1.8.5 3.1.6 1.3.1 1.7.1 4.6.1s3.3 0 4.6-.1c1.3-.1 2.3-.3 3.1-.6.9-.3 1.6-.7 2.3-1.4.7-.7 1.1-1.4 1.4-2.3.3-.8.5-1.8.6-3.1.1-1.3.1-1.7.1-4.6s0-3.3-.1-4.6c-.1-1.3-.3-2.3-.6-3.1-.3-.9-.7-1.6-1.4-2.3-.7-.7-1.4-1.1-2.3-1.4-.8-.3-1.8-.5-3.1-.6C15.3 0 14.9 0 12 0z"/><path fill="white" d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle fill="white" cx="18.4" cy="5.6" r="1.4"/></svg>
+    </a>
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="white" d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.3C0 23.4.6 24 1.3 24H12V14.7h-3v-3.6h3V8.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 1-2 2v2.3h3.4l-.5 3.6h-2.9V24h5.6c.7 0 1.3-.6 1.3-1.3V1.3c0-.7-.6-1.3-1.3-1.3z"/></svg>
+    </a>
+  </div>
+</footer>
+
 </body>
 </html>
