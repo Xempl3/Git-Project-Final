@@ -125,7 +125,7 @@ h2, p {
 }
 
 
-.texte-rideau {
+.texte-rideauy {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -260,6 +260,47 @@ h2, p {
   transition: transform 0.2s ease;
 }
 
-.lightboxy .close:hover {
+.lightboxy .closey:hover {
   transform: scale(1.2);
+}
+
+
+footer {
+  background-color: #011c37;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.reseauxy{
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.reseauxy a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #15DEA5;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.reseauxy a:hover {
+  transform: scale(1.15);
+  background: #0fc096;
+}
+
+.reseauxy svg {
+  width: 22px;
+  height: 22px;
 }
