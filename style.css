@@ -71,3 +71,136 @@ header {
   color: #011c37;
   box-shadow: 0 0 15px rgba(15, 3, 253, 0.5);
 }
+
+/* === TEXTE GLOBAL === */
+h2, p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* === SECTIONS PASSION (Texte + Image) === */
+.firstpassion, .secondpassion, .thirdpassion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  position: relative;  /* pour le logo d’arrière-plan */
+  overflow: hidden;
+}
+
+/* === ARRIÈRE-PLAN LOGO GIRONDINS === */
+.firstpassion::before,
+.secondpassion::before,
+.thirdpassion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/imglogo.png") center/40% no-repeat;
+  opacity: 0.05; /* logo discret */
+  filter: grayscale(100%) brightness(1.2);
+  z-index: 0;
+}
+
+/* Variation par section */
+.secondpassion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/imglogonouveau.jpg") center/40% no-repeat;
+  opacity: 0.05; /* logo discret */
+  filter: grayscale(100%) brightness(1.2);
+  z-index: 0;
+}
+
+.thirdpassion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/imglogo.png") center/40% no-repeat;
+  opacity: 0.05; /* logo discret */
+  filter: grayscale(100%) brightness(1.2);
+  z-index: 0;
+}
+
+/* === CONTENU AU PREMIER PLAN === */
+.firstpassion > *,
+.secondpassion > *,
+.thirdpassion > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* === BLOCS TEXTE === */
+.firsttext, .secondtext, .thirdtext {
+  flex: 1;
+}
+
+.firsttext p, .secondtext p, .thirdtext p {
+  font-size: 1.1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Image à gauche pour la seconde section */
+.secondpassion .image-box {
+  order: -1;
+}
+
+/* === IMAGE + FLU OUVER === */
+.image-box {
+  position: relative;
+  width: 480px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.image-box a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Effet de zoom + flou */
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 1s ease, filter 1s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.05);
+  filter: blur(5px) brightness(0.7);
+}
+
+/* Texte au centre de l’image */
+.texte-rideau {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.image-box:hover .texte-rideau {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition-delay: 0.2s;
+}
