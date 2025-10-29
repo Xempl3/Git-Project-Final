@@ -35,7 +35,7 @@ h2, p {
   opacity: 0.9;
 }
 
-.overlay-content, .firstpassiony, .secondpassiony, .thirdpassiony{
+.overlay-content{
   position: relative;
   z-index: 1;
   color: white;
@@ -76,7 +76,7 @@ h2, p {
   box-shadow: 0 0 15px rgba(15, 3, 253, 0.5);
 }
 
-.firstpassion, .secondpassion, .thirdpassion {
+.firstpassion, .secondpassion, .thirdpassion, .firstpassionyann, .secondpassionyann, .thirdpassionyann{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -89,7 +89,9 @@ h2, p {
 }
 
 
-.firstpassiony::before {
+.firstpassionyann::before,
+.secondpassionyann::before,
+.thirdpassionyann::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -98,6 +100,20 @@ h2, p {
   position: relative;
   overflow: hidden;
 }
+
+
+.firstpassionyann::before,
+.secondpassionyann::before,
+.thirdpassionyann::before  {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images_yann/Badge_adherent_Figure_Yakuro_1000x1000.png") center/40% no-repeat;
+  opacity: 0.05; /* logo discret */
+  filter: grayscale(100%) brightness(1.2);
+  z-index: 0;
+}
+
 
 .firstpassion::before,
 .secondpassion::before,
@@ -133,6 +149,9 @@ h2, p {
 
 
 .firstpassion > *,
+.firstpassionyann > *,
+.secondpassionyann > *,
+.thirdpassionyann > *,
 .secondpassion > *,
 .thirdpassion > * {
   position: relative;
