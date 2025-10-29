@@ -1,11 +1,9 @@
-/* === RESET GLOBAL === */
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* === HEADER === */
 header {
   position: relative;
   height: 910px;
@@ -17,8 +15,16 @@ header {
   overflow: hidden;
 }
 
-/* === VIDÉO DE FOND OPTIONNELLE === */
-.video-background {
+h2, p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.video-background, .image-backgroundy {
   position: absolute;
   top: 0;
   left: 0;
@@ -29,7 +35,7 @@ header {
   opacity: 0.9;
 }
 
-.overlay-content {
+.overlay-content{
   position: relative;
   z-index: 1;
   color: white;
@@ -37,11 +43,9 @@ header {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-/* === NAVIGATION === */
 .navigateur {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
   list-style: none;
   padding: 0;
@@ -72,18 +76,7 @@ header {
   box-shadow: 0 0 15px rgba(15, 3, 253, 0.5);
 }
 
-/* === TEXTE GLOBAL === */
-h2, p {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-/* === SECTIONS PASSION (Texte + Image) === */
-.firstpassion, .secondpassion, .thirdpassion {
+.firstpassion, .secondpassion, .thirdpassion, .firstpassionyann, .secondpassionyann, .thirdpassionyann{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,11 +84,37 @@ h2, p {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem;
-  position: relative;  /* pour le logo d’arrière-plan */
+  position: relative; 
   overflow: hidden;
 }
 
-/* === ARRIÈRE-PLAN LOGO GIRONDINS === */
+
+.firstpassionyann::before,
+.secondpassionyann::before,
+.thirdpassionyann::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images_yann/Badge_adherent_Figure_Yakuro_1000x1000.png") center/40% no-repeat;
+  opacity: 0.05;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.firstpassionyann::before,
+.secondpassionyann::before,
+.thirdpassionyann::before  {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images_yann/Badge_adherent_Figure_Yakuro_1000x1000.png") center/40% no-repeat;
+  opacity: 0.05; /* logo discret */
+  filter: grayscale(100%) brightness(1.2);
+  z-index: 0;
+}
+
+
 .firstpassion::before,
 .secondpassion::before,
 .thirdpassion::before {
@@ -107,8 +126,7 @@ h2, p {
   filter: grayscale(100%) brightness(1.2);
   z-index: 0;
 }
-
-/* Variation par section */
+  
 .secondpassion::before {
   content: "";
   position: absolute;
@@ -124,23 +142,22 @@ h2, p {
   position: absolute;
   inset: 0;
   background: url("images/imglogo.png") center/40% no-repeat;
-  opacity: 0.05; /* logo discret */
+  opacity: 0.05;
   filter: grayscale(100%) brightness(1.2);
   z-index: 0;
 }
 
-/* === CONTENU AU PREMIER PLAN === */
+
 .firstpassion > *,
+.firstpassionyann > *,
+.secondpassionyann > *,
+.thirdpassionyann > *,
 .secondpassion > *,
 .thirdpassion > * {
   position: relative;
   z-index: 1;
 }
 
-/* === BLOCS TEXTE === */
-.firsttext, .secondtext, .thirdtext {
-  flex: 1;
-}
 
 .firsttext p, .secondtext p, .thirdtext p {
   font-size: 1.1rem;
@@ -148,12 +165,10 @@ h2, p {
   margin-bottom: 1rem;
 }
 
-/* Image à gauche pour la seconde section */
 .secondpassion .image-box {
   order: -1;
 }
 
-/* === IMAGE + FLU OUVER === */
 .image-box {
   position: relative;
   width: 480px;
@@ -170,7 +185,6 @@ h2, p {
   color: inherit;
 }
 
-/* Effet de zoom + flou */
 .image-box img {
   width: 100%;
   height: auto;
@@ -183,7 +197,6 @@ h2, p {
   filter: blur(5px) brightness(0.7);
 }
 
-/* Texte au centre de l’image */
 .texte-rideau {
   position: absolute;
   top: 50%;
@@ -205,7 +218,6 @@ h2, p {
   transition-delay: 0.2s;
 }
 
-/* === GALERIE D'IMAGES === */
 .image-voyage {
   display: flex;
   justify-content: center;
@@ -225,13 +237,11 @@ h2, p {
   cursor: pointer;
 }
 
-/* Effet zoom au survol */
 .image-voyage img:hover {
   transform: scale(1.08);
   box-shadow: 0 0 20px rgba(49, 49, 49, 0.5);
 }
 
-/* === LIGHTBOX (plein écran CSS) === */
 .lightbox {
   display: none;
   position: fixed;
@@ -256,12 +266,10 @@ h2, p {
   to { transform: scale(1); opacity: 1; }
 }
 
-/* Affiche la lightbox quand elle est ciblée */
 .lightbox:target {
   display: flex;
 }
 
-/* Bouton de fermeture */
 .lightbox .close {
   position: fixed;
   top: 30px;
