@@ -24,7 +24,7 @@ h2, p {
   line-height: 1.6;
 }
 
-.image-backgroundy {
+.video-background, .image-backgroundy {
   position: absolute;
   top: 0;
   left: 0;
@@ -35,8 +35,48 @@ h2, p {
   opacity: 0.9;
 }
 
+.overlay-content{
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
 
-.firstpassiony, .secondpassiony, .thirdpassiony {
+.navigateur {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.navigateur li {
+  list-style: none;
+}
+
+.nav-btn {
+  background: #81888f;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10rem;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.nav-btn:hover {
+  transform: scale(1.15);
+  background: #ffffff;
+  color: #011c37;
+  box-shadow: 0 0 15px rgba(15, 3, 253, 0.5);
+}
+
+.firstpassion, .secondpassion, .thirdpassion, .firstpassionyann, .secondpassionyann, .thirdpassionyann{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,53 +89,87 @@ h2, p {
 }
 
 
-.firstpassiony::before,
-.secondpassiony::before,
-.thirdpassiony::before {
+.firstpassionyann::before,
+.secondpassionyann::before,
+.thirdpassionyann::before {
   content: "";
   position: absolute;
   inset: 0;
   background: url("images_yann/Badge_adherent_Figure_Yakuro_1000x1000.png") center/40% no-repeat;
   opacity: 0.05;
-  filter: grayscale(100%) brightness(1.2);
-  z-index: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.secondpassiony::before {
+
+.firstpassionyann::before,
+.secondpassionyann::before,
+.thirdpassionyann::before  {
   content: "";
   position: absolute;
   inset: 0;
   background: url("images_yann/Badge_adherent_Figure_Yakuro_1000x1000.png") center/40% no-repeat;
-  opacity: 0.05; 
+  opacity: 0.05; /* logo discret */
   filter: grayscale(100%) brightness(1.2);
   z-index: 0;
 }
 
-.thirdpassiony::before {
+
+.firstpassion::before,
+.secondpassion::before,
+.thirdpassion::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("images_yann/Badge_adherent_Figure_Yakuro_1000x1000.png") center/40% no-repeat;
-  opacity: 0.05; 
+  background: url("images/imglogo.png") center/40% no-repeat;
+  opacity: 0.05; /* logo discret */
+  filter: grayscale(100%) brightness(1.2);
+  z-index: 0;
+}
+  
+.secondpassion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/imglogonouveau.jpg") center/40% no-repeat;
+  opacity: 0.05; /* logo discret */
+  filter: grayscale(100%) brightness(1.2);
+  z-index: 0;
+}
+
+.thirdpassion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/imglogo.png") center/40% no-repeat;
+  opacity: 0.05;
   filter: grayscale(100%) brightness(1.2);
   z-index: 0;
 }
 
 
-.firstpassiony > *,
-.secondpassiony > *,
-.thirdpassiony > * {
+.firstpassion > *,
+.firstpassionyann > *,
+.secondpassionyann > *,
+.thirdpassionyann > *,
+.secondpassion > *,
+.thirdpassion > * {
   position: relative;
   z-index: 1;
 }
 
 
+.firsttext p, .secondtext p, .thirdtext p {
+  font-size: 1.1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
 
-.secondpassiony .image-boxy {
+.secondpassion .image-box {
   order: -1;
 }
 
-.image-boxy {
+.image-box {
   position: relative;
   width: 480px;
   overflow: hidden;
@@ -104,28 +178,26 @@ h2, p {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
-.image-boxy a {
+.image-box a {
   display: block;
   position: relative;
   text-decoration: none;
   color: inherit;
 }
 
-
-.image-boxy img {
+.image-box img {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 1s ease, filter 1s ease;
 }
 
-.image-boxy:hover img {
+.image-box:hover img {
   transform: scale(1.05);
   filter: blur(5px) brightness(0.7);
 }
 
-
-.texte-rideauy {
+.texte-rideau {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -140,58 +212,14 @@ h2, p {
   pointer-events: none;
 }
 
-.image-boxy:hover .texte-rideauy {
+.image-box:hover .texte-rideau {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition-delay: 0.2s;
 }
 
 
-.overlay-contenty {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-}
-
-
-.navigateury {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.navigateury li {
-  list-style: none;
-}
-
-.nav-btny {
-  background: #81888f;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 10rem;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-.nav-btny:hover {
-  transform: scale(1.15);
-  background: #ffffff;
-  color: #011c37;
-  box-shadow: 0 0 15px rgba(15, 3, 253, 0.5);
-}
-
-
-.image-voyagey {
+.image-voyage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,7 +228,8 @@ h2, p {
   margin: 2rem 0;
 }
 
-.image-voyagey img {
+
+.image-voyage img {
   width: 300px;
   height: 200px;
   object-fit: cover;
@@ -210,14 +239,14 @@ h2, p {
   cursor: pointer;
 }
 
-/* Effet zoom au survol */
-.image-voyagey img:hover {
+
+.image-voyage img:hover {
   transform: scale(1.08);
   box-shadow: 0 0 20px rgba(49, 49, 49, 0.5);
 }
 
-/* === LIGHTBOX (plein écran CSS) === */
-.lightboxy {
+
+.lightbox {
   display: none;
   position: fixed;
   inset: 0;
@@ -227,7 +256,8 @@ h2, p {
   z-index: 999;
 }
 
-.lightboxy img {
+
+.lightbox img {
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
@@ -241,13 +271,12 @@ h2, p {
   to { transform: scale(1); opacity: 1; }
 }
 
-/* Affiche la lightbox quand elle est ciblée */
-.lightboxy:target {
+
+.lightbox:target {
   display: flex;
 }
 
-/* Bouton de fermeture */
-.lightboxy .closey {
+.lightbox .close {
   position: fixed;
   top: 30px;
   right: 40px;
@@ -260,10 +289,9 @@ h2, p {
   transition: transform 0.2s ease;
 }
 
-.lightboxy .closey:hover {
+.lightbox .close:hover {
   transform: scale(1.2);
 }
-
 
 footer {
   background-color: #011c37;
@@ -278,13 +306,14 @@ footer p {
   font-size: 1.2rem;
 }
 
-.reseauxy{
+.reseaux {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 
-.reseauxy a {
+
+.reseaux a {
   width: 40px;
   height: 40px;
   display: inline-flex;
@@ -295,12 +324,12 @@ footer p {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.reseauxy a:hover {
+.reseaux a:hover {
   transform: scale(1.15);
   background: #0fc096;
 }
 
-.reseauxy svg {
+.reseaux svg {
   width: 22px;
   height: 22px;
 }
