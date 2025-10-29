@@ -15,7 +15,16 @@ header {
   overflow: hidden;
 }
 
-.video-background {
+h2, p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.video-background, .image-backgroundy {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +35,7 @@ header {
   opacity: 0.9;
 }
 
-.overlay-content {
+.overlay-content, .firstpassiony, .secondpassiony, .thirdpassiony{
   position: relative;
   z-index: 1;
   color: white;
@@ -67,15 +76,6 @@ header {
   box-shadow: 0 0 15px rgba(15, 3, 253, 0.5);
 }
 
-h2, p {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
 .firstpassion, .secondpassion, .thirdpassion {
   display: flex;
   align-items: center;
@@ -84,6 +84,17 @@ h2, p {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem;
+  position: relative; 
+  overflow: hidden;
+}
+
+
+.firstpassiony::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images_yann/Badge_adherent_Figure_Yakuro_1000x1000.png") center/40% no-repeat;
+  opacity: 0.05;
   position: relative;
   overflow: hidden;
 }
@@ -99,7 +110,7 @@ h2, p {
   filter: grayscale(100%) brightness(1.2);
   z-index: 0;
 }
-
+  
 .secondpassion::before {
   content: "";
   position: absolute;
@@ -120,6 +131,7 @@ h2, p {
   z-index: 0;
 }
 
+
 .firstpassion > *,
 .secondpassion > *,
 .thirdpassion > * {
@@ -127,9 +139,6 @@ h2, p {
   z-index: 1;
 }
 
-.firsttext, .secondtext, .thirdtext {
-  flex: 1;
-}
 
 .firsttext p, .secondtext p, .thirdtext p {
   font-size: 1.1rem;
@@ -190,6 +199,7 @@ h2, p {
   transition-delay: 0.2s;
 }
 
+
 .image-voyage {
   display: flex;
   justify-content: center;
@@ -198,6 +208,7 @@ h2, p {
   flex-wrap: wrap;
   margin: 2rem 0;
 }
+
 
 .image-voyage img {
   width: 300px;
@@ -209,10 +220,12 @@ h2, p {
   cursor: pointer;
 }
 
+
 .image-voyage img:hover {
   transform: scale(1.08);
   box-shadow: 0 0 20px rgba(49, 49, 49, 0.5);
 }
+
 
 .lightbox {
   display: none;
@@ -224,6 +237,7 @@ h2, p {
   z-index: 999;
 }
 
+
 .lightbox img {
   max-width: 90%;
   max-height: 90%;
@@ -231,6 +245,13 @@ h2, p {
   box-shadow: 0 0 20px rgba(198, 7, 7, 0.2);
   animation: zoomIn 0.4s ease;
 }
+
+/* Animation d’apparition */
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
 
 .lightbox:target {
   display: flex;
@@ -271,6 +292,7 @@ footer p {
   justify-content: center;
   gap: 1.5rem;
 }
+
 
 .reseaux a {
   width: 40px;
