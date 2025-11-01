@@ -8,4 +8,4 @@ Membres de l'équipe :
 - Yann
 - Antoine
 
-![alt text](readme/imgreadme.png)
+![alt text](image_readme/imgreadme.png)
